@@ -23,7 +23,7 @@ public class Busqueda_Anchura {
             }
         }
         // Ahora solo cambiamos el tipo a los nodos de la matriz
-        // que serán un muro(), así como la entrada(I) y salida(S)
+        // que serán un muro(#), así como la entrada(I) y salida(S)
         // del laberinto.
         matriz[0][0].setTipo('I');        
         matriz[0][3].setTipo('#');        
