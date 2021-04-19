@@ -54,9 +54,9 @@ public class Busqueda_Anchura {
         imprimirAdyacentes(bfs.getV());
         // Imprimimos la ruta obtenida.
         System.out.println("\nRuta obtenida");
-        Nodo aux=ruta.getLast();
+        Nodo aux=ruta.getFirst();
         System.out.print("("+aux.getX()+","+aux.getY()+")");
-        for (int i = ruta.size()-2; i > 0; i--) {
+        for (int i = 1; i < ruta.size(); i++) {
             aux=ruta.get(i);
             System.out.print("-("+aux.getX()+","+aux.getY()+")");
         }
