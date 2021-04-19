@@ -56,7 +56,7 @@ public class Busqueda_Anchura {
         System.out.println("\nRuta obtenida");
         Nodo aux=ruta.getFirst();
         System.out.print("("+aux.getX()+","+aux.getY()+")");
-        for (int i = 1; i < ruta.size(); i++) {
+        for (int i = 1; i < ruta.size(); i--) {
             aux=ruta.get(i);
             System.out.print("-("+aux.getX()+","+aux.getY()+")");
         }
