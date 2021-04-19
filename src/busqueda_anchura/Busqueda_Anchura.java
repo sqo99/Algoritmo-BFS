@@ -69,7 +69,7 @@ public class Busqueda_Anchura {
                 Nodo n=matriz[i][j];
                 System.out.print("("+n.getX()+","+n.getY()+")"+"|"+n.getTipo()+"|"+n.isVisitado()+"\t");
             }
-            //System.out.println();
+            System.out.println();
         }
     }
     

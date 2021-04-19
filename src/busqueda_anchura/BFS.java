@@ -19,7 +19,7 @@ public class BFS {
         this.matriz = matriz;
         this.entrada = origen;
         this.salida = destino;
-        //v=new LinkedList();
+        v=new LinkedList();
     }
 
     public LinkedList<Nodo> getV() {

@@ -20,7 +20,7 @@ public class Nodo {
     public Nodo(char tipo) {
         this.tipo = tipo;
         this.visitado = false;
-        //this.w = new LinkedList();
+        this.w = new LinkedList();
     } 
 
     public char getTipo() {
