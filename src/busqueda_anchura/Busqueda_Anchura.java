@@ -52,7 +52,7 @@ public class Busqueda_Anchura {
         // Imprimimos la lista de adyacentes.
         System.out.println("\nLista de adyacentes\n  v\t  w");
         imprimirAdyacentes(bfs.getV());
-        
+        // Imprimimos la ruta obtenida.
         System.out.println("\nRuta obtenida");
         Nodo aux=ruta.getFirst();
         System.out.print("("+aux.getX()+","+aux.getY()+")");
@@ -69,7 +69,7 @@ public class Busqueda_Anchura {
                 Nodo n=matriz[i][j];
                 System.out.print("("+n.getX()+","+n.getY()+")"+"|"+n.getTipo()+"|"+n.isVisitado()+"\t");
             }
-            System.out.println();
+            //System.out.println();
         }
     }
     
