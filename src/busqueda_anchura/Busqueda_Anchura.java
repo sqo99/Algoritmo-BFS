@@ -1,5 +1,6 @@
 package busqueda_anchura;
 
+import com.sun.xml.internal.ws.util.StringUtils;
 import java.util.LinkedList;
 
 /**
@@ -48,7 +49,7 @@ public class Busqueda_Anchura {
         LinkedList<Nodo> ruta=bfs.busquedaAmplitud();
         // Imprimimos la matriz después de ejecutar el algoritmo
         System.out.println("Matriz después del recorrido");
-        imprimirMatriz(matriz);
+        imprimirMatriz2(matriz);
         // Imprimimos la lista de adyacentes.
         System.out.println("\nLista de adyacentes\n  v\t  w");
         imprimirAdyacentes(bfs.getV());
@@ -78,9 +79,11 @@ public class Busqueda_Anchura {
             int tam=matriz[i].length;
             for (int j = 0; j < tam; j++) {
                 Nodo n=matriz[i][j];
-                System.out.print(" ("+n.getX()+","+n.getY()+")");
+                String aux="("+n.getX()+","+n.getY()+")";
+                aux=String.format("%5s", aux);
+                System.out.print(" "+aux+" ");
                 if(j<tam-1)
-                    System.out.print(" |");
+                    System.out.print("|");
             }
             System.out.println("");
             for (int j = 0; j < tam; j++) {
@@ -92,9 +95,11 @@ public class Busqueda_Anchura {
             System.out.println("");
             for (int j = 0; j < tam; j++) {
                 Nodo n=matriz[i][j];
-                System.out.print(" "+n.isVisitado()+"");
+                String aux=n.isVisitado()+"";
+                aux=String.format("%5s", aux);
+                System.out.print(" "+aux+" ");
                 if(j<tam-1)
-                    System.out.print(" |");
+                    System.out.print("|");
             }
             System.out.println("");
             if(i<matriz.length-1){
