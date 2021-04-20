@@ -40,7 +40,7 @@ public class Busqueda_Anchura {
         
         // Imprimimos la matriz de entrada.
         System.out.println("Matriz de entrada");
-        imprimirMatriz2(matriz);
+        imprimirMatriz(matriz);
         System.out.println("");
         // Creamos una instancia de la clase BFS, a la cual le enviamos
         // la matriz y el nodo de entrada y nodo de salida.
@@ -49,7 +49,7 @@ public class Busqueda_Anchura {
         LinkedList<Nodo> ruta=bfs.busquedaAmplitud();
         // Imprimimos la matriz después de ejecutar el algoritmo
         System.out.println("Matriz después del recorrido");
-        imprimirMatriz2(matriz);
+        imprimirMatriz(matriz);
         // Imprimimos la lista de adyacentes.
         System.out.println("\nLista de adyacentes\n  v\t  w");
         imprimirAdyacentes(bfs.getV());
@@ -65,16 +65,6 @@ public class Busqueda_Anchura {
     }
     
     public static void imprimirMatriz(Nodo matriz[][]){
-        for (int i = 0; i < matriz.length; i++) {
-            for (int j = 0; j < matriz[i].length; j++) {
-                Nodo n=matriz[i][j];
-                System.out.print("("+n.getX()+","+n.getY()+")"+"|"+n.getTipo()+"|"+n.isVisitado()+"\t");
-            }
-            System.out.println();
-        }
-    }
-    
-    public static void imprimirMatriz2(Nodo matriz[][]){
         for (int i = 0; i < matriz.length; i++) {
             int tam=matriz[i].length;
             for (int j = 0; j < tam; j++) {
